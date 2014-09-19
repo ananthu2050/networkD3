@@ -125,7 +125,7 @@ HTMLWidgets.widget({
         .data(color.domain())
       .enter().append("g")
         .attr("class", "legend")
-        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 ")"; });
   
     legend.append("rect")
         .attr("x", width - 18)
