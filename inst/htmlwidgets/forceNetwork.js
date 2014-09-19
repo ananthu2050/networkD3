@@ -109,14 +109,14 @@ HTMLWidgets.widget({
       .style("opacity", options.opacity)
       .style("stroke-width", "1.5px");
 
-    node.append("svg:text")
+   /* node.append("svg:text")
       .attr("class", "nodetext")
       .attr("dx", 12)
       .attr("dy", ".35em")
       .text(function(d) { return d.name })
       .style("font", options.fontsize + "px serif")
       .style("opacity", 0)
-      .style("pointer-events", "none");
+      .style("pointer-events", "none");*/
 
     function tick() {
       link
