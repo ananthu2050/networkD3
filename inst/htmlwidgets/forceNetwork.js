@@ -108,7 +108,10 @@ HTMLWidgets.widget({
       .style("stroke", "#fff")
       .style("opacity", options.opacity)
       .style("stroke-width", "1.5px");
-
+    
+	 node.append("title")
+      .text(function(d) { return d.name; });
+    
    /* node.append("svg:text")
       .attr("class", "nodetext")
       .attr("dx", 12)
