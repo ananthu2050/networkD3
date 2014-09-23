@@ -101,8 +101,7 @@ HTMLWidgets.widget({
       .style("opacity", options.opacity)
       .on("mouseover", mouseover)
       .on("mouseout", mouseout)
-      .call(force.drag).
-      .on('dblclick', connectedNodes);
+      .call(force.drag);
 
     node.append("circle")
       .attr("r", 6)
