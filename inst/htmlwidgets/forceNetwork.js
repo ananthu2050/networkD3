@@ -172,5 +172,36 @@ HTMLWidgets.widget({
       d3.select(this).select("text").transition()
         .style("opacity", 0);
     }
+    
+    var linkedByIndex = {};
+    for (i = 0; i < graph.nodes.length; i++) {
+        linkedByIndex[i + "," + i] = 1;
+    };
+    graph.links.forEach(function (d) {
+        linkedByIndex[d.source.index + "," + d.target.index] = 1;
+    });
+    
+    
+    
+    function neighboring(a, b) {
+        return linkedByIndex[a.index + "," + b.index];
+    }
+    
+    function connectedNodes() {
+    
+        if (toggle == 0) {
+    
+            d = d3.select(this).node().__data__;
+            node.style("opacity", function (o) {
+                return neighboring(d, o) | neighboring(o, d) ? 1 : 0.15;
+            });
+            toggle = 1;
+        } else {
+            node.style("opacity", 1);
+            toggle = 0;
+        }
+        var divtext = d3.select("h1");
+        console.log(d3.select("h1").text("hi"))
+    }
   },
 });
