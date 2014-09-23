@@ -178,7 +178,7 @@ HTMLWidgets.widget({
     for (i = 0; i < graph.nodes.length; i++) {
         linkedByIndex[i + "," + i] = 1;
     };
-    graph.links.forEach(function (d) {
+    force.links.forEach(function (d) {
         linkedByIndex[d.source.index + "," + d.target.index] = 1;
     });
     
