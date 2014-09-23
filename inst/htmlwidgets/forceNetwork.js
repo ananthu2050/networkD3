@@ -202,8 +202,6 @@ HTMLWidgets.widget({
             node.style("opacity", 1);
             toggle = 0;
         }
-        var divtext = d3.select("h1");
-        console.log(d3.select("h1").text("hi"))
     }
   },
 });
