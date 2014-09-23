@@ -175,7 +175,7 @@ HTMLWidgets.widget({
     }
     var toggle = 0;
     var linkedByIndex = {};
-    for (i = 0; i < graph.nodes.length; i++) {
+    for (i = 0; i < force.nodes.length; i++) {
         linkedByIndex[i + "," + i] = 1;
     };
     force.links.forEach(function (d) {
