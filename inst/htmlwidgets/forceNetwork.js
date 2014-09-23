@@ -26,6 +26,7 @@ HTMLWidgets.widget({
 
     // alias options
     var options = x.options;
+     var toggle = 0;
 
     // convert links and nodes data frames to d3 friendly format
     var links = HTMLWidgets.dataframeToD3(x.links);
@@ -173,7 +174,7 @@ HTMLWidgets.widget({
       d3.select(this).select("text").transition()
         .style("opacity", 0);
     }
-    var toggle = 0;
+   
     var linkedByIndex = {};
     for (i = 0; i < force.nodes.length; i++) {
         linkedByIndex[i + "," + i] = 1;
