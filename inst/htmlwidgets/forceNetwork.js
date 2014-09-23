@@ -121,7 +121,7 @@ HTMLWidgets.widget({
       .style("font", options.fontsize + "px serif")
       .style("opacity", 0)
       .style("pointer-events", "none");*/
-  var legend = svg.selectAll(".legend")
+ /* var legend = svg.selectAll(".legend")
         .data(color.domain())
       .enter().append("g")
         .attr("class", "legend")
@@ -138,7 +138,7 @@ HTMLWidgets.widget({
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
-        .text(function(d) { return d; });
+        .text(function(d) { return d; });*/
     
     function tick() {
       link
